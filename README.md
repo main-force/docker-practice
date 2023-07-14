@@ -54,6 +54,34 @@ mainforce@gimjulyeog-ui-MacBookAir-16824 assignment_3 % docker run -v ./shared:/
 docker: Error response from daemon: Ports are not available: exposing port TCP 0.0.0.0:5000 -> 0.0.0.0:0: listen tcp 0.0.0.0:5000: bind: address already in use.
 ```
 
+## Git 충돌
+
+### 최신 반영 사항을 pull을 하지 않고, push를 시도할 때
+
+```bash
+git add test_print_hello.py
+git commit -m "upload print_hello_service test_file:"
+git push
+```
+
+<img width="773" alt="스크린샷 2023-07-14 오전 9 35 12" src="https://github.com/main-force/docker-practice/assets/44683307/00e42754-290a-4a20-a3c0-5371d16e9ab2">
+
+merge를 통해, 현재 브랜치 상태에 merge한다.
+
+```bash
+git config pull.rebase false
+git pull
+```
+
+이를 통해, 최신 반영 사항으로 로컬을 업데이트 후
+
+로컬의 변동 사항을 push한다.
+
+```bash
+git push
+```
+
+
 ### Solution
 
 `lsof` 명령어를 통해 점유하는 프로세스 번호 찾기
@@ -70,33 +98,4 @@ ControlCe 544 mainforce    8u  IPv6 0xd55b4537ebc766cd      0t0  TCP *:commplex-
 
 ```bash
 kill -9 544
-```
-
-# Git
-
-## 충돌
-
-### 최신 반영 사항을 pull을 하지 않고, push를 시도할 때
-
-```bash
-git add test_print_hello.py
-git commit -m "upload print_hello_service test_file:"
-git push
-```
-
-<img width="773" alt="스크린샷 2023-07-14 오전 9 35 12" src="https://github.com/main-force/docker-practice/assets/44683307/00e42754-290a-4a20-a3c0-5371d16e9ab2">
-
-merge를 통해, 현재 브랜치 상태에 merge한다.
-
-```bash
-git config pull.rebase false
-git pull
-```
-
-이를 통해, 최신 반영 사항으로 로컬을 업데이트 후
-
-로컬의 변동 사항을 push한다.
-
-```bash
-git push
 ```
