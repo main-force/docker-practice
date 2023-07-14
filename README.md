@@ -38,9 +38,9 @@ docker run -v ./shared:/app/shared -it print_hello_service:1.0.0
 docker run -v ./shared:/app/shared -p 8888:8888 -it print_bye_service:1.0.0
 ```
 
-<img width="1061" alt="스크린샷 2023-07-13 오후 11 11 32" src="https://github.com/main-force/docker-practice/assets/44683307/ad5dafbe-6110-41d0-86d9-438949950a0e">
-
 ### Expected Output
+
+<img width="1061" alt="스크린샷 2023-07-13 오후 11 11 32" src="https://github.com/main-force/docker-practice/assets/44683307/ad5dafbe-6110-41d0-86d9-438949950a0e">
 
 <img width="669" alt="스크린샷 2023-07-13 오후 11 12 33" src="https://github.com/main-force/docker-practice/assets/44683307/7f12d225-fef7-4424-88f8-a104b91e4b93">
 
