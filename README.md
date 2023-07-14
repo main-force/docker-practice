@@ -8,7 +8,7 @@
 docker build -t print_hello_service:1.0.0 -f ./Dockerfile_print_hello_service .
 ```
 
-![스크린샷 2023-07-13 오후 10.34.31.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/099e048a-20b1-4fe6-a92a-b42a5fe4fdc3/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-07-13_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_10.34.31.png)
+<img width="560" alt="스크린샷 2023-07-13 오후 10 34 31" src="https://github.com/main-force/docker-practice/assets/44683307/aa11c820-ae77-40ab-baa6-ef8c29108b48">
 
 ## Build print_bye_service Image
 
@@ -16,7 +16,8 @@ docker build -t print_hello_service:1.0.0 -f ./Dockerfile_print_hello_service .
 docker build -t print_bye_service:1.0.0 -f ./Dockerfile_print_bye_service .
 ```
 
-![스크린샷 2023-07-13 오후 10.35.42.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/458fd7bf-aed0-4248-b3c6-92ef16d68bd8/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-07-13_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_10.35.42.png)
+<img width="562" alt="스크린샷 2023-07-13 오후 10 35 42" src="https://github.com/main-force/docker-practice/assets/44683307/5e16b897-5e1c-434c-9c49-faa37eb9df62">
+
 
 # Run Containers
 
@@ -28,7 +29,8 @@ docker run -v ./shared:/app/shared -it print_hello_service:1.0.0
 
 ### Expected Output
 
-![스크린샷 2023-07-13 오후 10.39.28.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ff3c5376-480e-46a0-86ed-f833a699dd41/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-07-13_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_10.39.28.png)
+<img width="964" alt="스크린샷 2023-07-13 오후 10 39 28" src="https://github.com/main-force/docker-practice/assets/44683307/8bdb6456-62e4-4567-9039-1937984d5bab">
+
 
 ## Run print_bye_service Container
 
@@ -36,11 +38,12 @@ docker run -v ./shared:/app/shared -it print_hello_service:1.0.0
 docker run -v ./shared:/app/shared -p 8888:8888 -it print_bye_service:1.0.0
 ```
 
-![스크린샷 2023-07-13 오후 11.11.32.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/002b600a-9fa2-4b01-8979-405f9633bbc2/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-07-13_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_11.11.32.png)
+<img width="1061" alt="스크린샷 2023-07-13 오후 11 11 32" src="https://github.com/main-force/docker-practice/assets/44683307/ad5dafbe-6110-41d0-86d9-438949950a0e">
 
 ### Expected Output
 
-![스크린샷 2023-07-13 오후 11.12.33.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bc8f7258-78ae-428a-9dad-c77339dd4384/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-07-13_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_11.12.33.png)
+<img width="669" alt="스크린샷 2023-07-13 오후 11 12 33" src="https://github.com/main-force/docker-practice/assets/44683307/7f12d225-fef7-4424-88f8-a104b91e4b93">
+
 
 # Troubleshoots
 
@@ -81,7 +84,7 @@ git commit -m "upload print_hello_service test_file:"
 git push
 ```
 
-![스크린샷 2023-07-14 오전 9.35.12.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/31c2e3c5-21cd-4707-804c-4a5aa4930bd8/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-07-14_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_9.35.12.png)
+<img width="773" alt="스크린샷 2023-07-14 오전 9 35 12" src="https://github.com/main-force/docker-practice/assets/44683307/00e42754-290a-4a20-a3c0-5371d16e9ab2">
 
 merge를 통해, 현재 브랜치 상태에 merge한다.
 
