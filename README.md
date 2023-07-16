@@ -1,7 +1,7 @@
 # 과제5
-
 - print_hello_service는 컨테이너 구동 시, 특정 정보들을 print하고 종료하는 서비스입니다.
 - print_bye_service는 flask를 활용한 웹서버로, "GET http://${hostIp}:{8888}/" 요청 시 "bye" 10개를 return하는 서비스입니다.
+- Github 액션은 pytest를 수행하고, 테스트는 print_hello_service의 `return_hello`함수의 정상 동작을 확인합니다.
 
 # Build Images
 
