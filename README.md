@@ -47,6 +47,22 @@ docker run -v ./shared:/app/shared -p 8888:8888 -it print_bye_service:1.0.0
 
 <img width="669" alt="스크린샷 2023-07-13 오후 11 12 33" src="https://github.com/main-force/docker-practice/assets/44683307/7f12d225-fef7-4424-88f8-a104b91e4b93">
 
+# Docker Swarm
+
+```bash
+docker swarm init
+```
+
+> print_hello_service의 경우 데몬상태로 서비스되지 않기때문에(특정 내용 print후 종료 됨), 실행하지 않았습니다.
+
+## Create print_bye_service
+
+```bash
+docker service create --name print_bye_service --replicas 3 --publish published=8888,target=8888 --mount type=bind,src=$(pwd)/shared,dst=/app/shared print_bye_service:1.0.0
+```
+
+<img width="917" alt="스크린샷 2023-07-16 오후 4 29 44" src="https://github.com/main-force/docker-practice/assets/44683307/9cfee7da-6a43-400e-9357-900ad6c61aa2">
+
 
 # Troubleshoots
 
