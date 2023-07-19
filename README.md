@@ -66,13 +66,6 @@ docker service create --name print_bye_service --replicas 3 --publish published=
 
 # Troubleshoots
 
-## Ports are not available
-
-```bash
-mainforce@gimjulyeog-ui-MacBookAir-16824 assignment_3 % docker run -v ./shared:/app/shared -p 5000:5000 -it print_bye_service:1.0.0
-docker: Error response from daemon: Ports are not available: exposing port TCP 0.0.0.0:5000 -> 0.0.0.0:0: listen tcp 0.0.0.0:5000: bind: address already in use.
-```
-
 ## Git 충돌
 
 ### 최신 반영 사항을 pull을 하지 않고, push를 시도할 때
@@ -100,6 +93,12 @@ git pull
 git push
 ```
 
+## Ports are not available
+
+```bash
+mainforce@gimjulyeog-ui-MacBookAir-16824 assignment_3 % docker run -v ./shared:/app/shared -p 5000:5000 -it print_bye_service:1.0.0
+docker: Error response from daemon: Ports are not available: exposing port TCP 0.0.0.0:5000 -> 0.0.0.0:0: listen tcp 0.0.0.0:5000: bind: address already in use.
+```
 
 ### Solution
 
